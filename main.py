@@ -33,6 +33,7 @@ plt.bar(["Female", "Male"], means, yerr=standard_deviations, capsize=5)
 plt.xlabel("Sex")
 plt.ylabel("ABeta42 (pg/ug)")
 plt.title("Mean ABeta42 Levels by Sex")
+plt.savefig("bar_graph.png")
 plt.show()
 
 # Compare ABeta40 and ABeta42 levels
@@ -43,4 +44,5 @@ plt.scatter(abeta40, abeta42)
 plt.xlabel("ABeta40 (pg/ug)")
 plt.ylabel("ABeta42 (pg/ug)")
 plt.title("ABeta40 vs. ABeta42 Levels")
+plt.savefig("scatter_plot.png")
 plt.show()
