@@ -28,8 +28,9 @@ male_abeta42 = [patient.abeta42 for patient in Patient.all_patients if patient.s
 
 means = [np.mean(female_abeta42), np.mean(male_abeta42)]
 standard_deviations = [np.std(female_abeta42), np.std(male_abeta42)]
+yerr = [np.zeros(len(means)), standard_deviations]
 
-plt.bar(["Female", "Male"], means, yerr=standard_deviations, capsize=5)
+plt.bar(["Female", "Male"], means, yerr=yerr, capsize=5)
 plt.xlabel("Sex")
 plt.ylabel("ABeta42 (pg/ug)")
 plt.title("Mean ABeta42 Levels by Sex")
